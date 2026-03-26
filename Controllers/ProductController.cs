@@ -1,4 +1,3 @@
-using api_dotnet.Data;
 using api_dotnet.Models;
 using api_dotnet.Services;
 using Microsoft.AspNetCore.Mvc;
