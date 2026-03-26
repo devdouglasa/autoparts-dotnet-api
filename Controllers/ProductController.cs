@@ -25,7 +25,7 @@ namespace api_dotnet.Controllers
 
             if(product is null)
             {
-                return NotFound("Produto não encontrado!");
+                return NotFound(new { message = "Produto não encontrado!" });
             }
 
             return Ok(product);
