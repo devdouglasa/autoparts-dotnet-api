@@ -4,7 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace api_dotnet.Controllers
 {
-    [Route("[controller]")]
+    [ApiController]
+    [Route("api/product")]
     public class ProductController(ProductService productService) : Controller
     {
         private readonly ProductService _productService = productService;
@@ -18,8 +19,8 @@ namespace api_dotnet.Controllers
             return products;
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Product>> GetProductById(int id)
+        [HttpGet("{id:int}")]
+        public async Task<IActionResult> GetProductById([FromRoute] int id)
         {
             var product = await _productService.GetProductById(id);
 
