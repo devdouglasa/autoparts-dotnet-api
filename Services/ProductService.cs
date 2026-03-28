@@ -45,5 +45,22 @@ namespace api_dotnet.Services
 
             return product;
         }
+
+        public async Task<Product> Create(ProductCreateDto dto)
+        {
+            var product = new Product
+            {
+                Name = dto.Name,
+                Description = dto.Description,
+                ManufacturerCode = dto.ManufacturerCode,
+                Sku = dto.Sku,
+                Price = dto.Price
+            };
+
+            _appDbContext.Add(product);
+            await _appDbContext.SaveChangesAsync();
+
+            return product;
+        }
     }
 }
