@@ -1,5 +1,4 @@
 using api_dotnet.Dtos.Product;
-using api_dotnet.Models;
 using api_dotnet.Services;
 using Microsoft.AspNetCore.Mvc;
 
