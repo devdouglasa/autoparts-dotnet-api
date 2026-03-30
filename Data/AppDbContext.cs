@@ -9,6 +9,7 @@ namespace api_dotnet.Data
         public DbSet<Brand> Brands { get; set; }
         public DbSet<UnitMeasure> UnitsMeasures { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<StockMovement> StockMovements { get; set; }
 
