@@ -17,6 +17,9 @@ namespace api_dotnet.Models
         public string? Address { get; set; }
         public string? City { get; set; }
         public string? State { get; set; }
+        public bool Active { get; set; } = true;
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
         public ICollection<Product> Products { get; set; } = [];
         public ICollection<StockMovement> StockMovements { get; set; } = [];

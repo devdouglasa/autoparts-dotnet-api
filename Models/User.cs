@@ -17,6 +17,9 @@ namespace api_dotnet.Models
         public int ProfileId { get; set; }
         [Required]
         public UserProfile Profile { get; set; }
+        public bool Active { get; set; } = true;
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
         public ICollection<StockMovement> StockMovements { get; set; } = [];
 
